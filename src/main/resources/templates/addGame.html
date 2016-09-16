@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="container">
+    <head>
+        <meta charset="UTF-8"/>
+        <link th:href="@{/css/bootstrap-3.0.3.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+    </head>
+    <body>
+
+    <h1>Add a new game</h1>
+    <p>On this page we add a new game</p>
+    <div class="form-group">
+        <form method="post" action="/processgame">
+            <div>
+                <label for="title">Title</label>
+                <input name="title" type="text"/>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input name="description" type="text"/>
+            </div>
+            <div>
+                <label for="rating">Rating</label>
+                <input name="rating" type="text"/>
+            </div>
+            <input type="submit" value="Add new game"/>
+        </form>
+
+        <script th:src="@{/js/jquery-2.0.2.min.js}"></script>
+        <script th:src="@{/js/bootstrap-3.0.3.min.js}"></script>
+        </div>
+    </body>
+</div>
+</html>
