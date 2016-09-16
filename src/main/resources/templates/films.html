@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Dit is mijn template pagina</h1>
+        <p>Joepie!</p>
+
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Length</th>
+                <th>Release year</th>
+            </tr>
+
+            <tr th:each="f : ${filmList}">
+                <td th:text="${f.id}"></td>
+                <td th:text="${f.title}"></td>
+                <td th:text="${f.description}"></td>
+                <td th:text="${f.length}"></td>
+                <td th:text="${f.releaseYear}"></td>
+            </tr>
+
+        </table>
+        <a th:href="@{/addfilm}">Add new film</a>
+    </body>
+</html>

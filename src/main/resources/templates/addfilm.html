@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Add a new film</h1>
+        <p>On this page we add a new film</p>
+
+        <form method="post" action="/processfilm">
+            <div>
+                <label for="title">Title</label>
+                <input name="title" type="text"/>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input name="description" type="text"/>
+            </div>
+            <div>
+                <label for="releaseYear">Release year</label>
+                <input name="releaseYear" type="text"/>
+            </div>
+            <div>
+                <label for="length">Length</label>
+                <input name="length" type="text"/>
+            </div>
+            <input type="submit" value="Add new film"/>
+        </form>
+
+    </body>
+</html>
